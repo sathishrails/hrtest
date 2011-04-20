@@ -1,0 +1,12 @@
+<div class="field">
+<%= fields_for "mandate[new_interview_attributes][]",interview_object do |interview_form| %>
+	<%= "Interview" %><br>    
+	<%= interview_form.text_field :name %><br />
+        <%= "Conducting_Date:"  %><br>	
+	<%= interview_form.text_field  :conducting_date, :class => "sample" %><br />
+	<%= "Description:"  %><br>
+	<%= interview_form.text_area :description,  :rows => 3%><br>
+       <%= link_to "add_applicant" , '#' , :class => "add_applicant_class" %>
+<% end %>
+</div>
+

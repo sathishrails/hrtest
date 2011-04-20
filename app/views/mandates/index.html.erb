@@ -1,0 +1,33 @@
+<h1>Listing mandates</h1>
+
+<table>
+  <tr>
+    <th>Designation</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<div class = "container_12">
+	<div class="grid_3">
+		<ul>
+			<li><h1>Home</h1><p><%= link_to 'Home', '# '%></p></li>
+			<li><h1>Mandate</h1><p><%= link_to 'Mandate' , mandates_path %></p></li>
+			<li><h1>Interview</h1><p><%= link_to 'Interview' , interviews_path %></p></li>
+			<li><h1>Applicant</h1><p><%= link_to 'Applicant' , applicants_path %></p></li>
+			<li><h1>Comment</h1><p><%= link_to 'Comment' , comments_path %></p></li>
+			<li><h1>Company</h1><p><%= link_to 'Company' , companies_path %></p></li>
+		</ul>
+	</div>
+	<div class ="grid_9">
+		<% @mandates.each do |mandate| %>
+	  <tr>
+	    <td><%= mandate.designation %></td>
+	    <td><%= link_to 'Show', mandate %></td>
+	    <td><%= link_to 'Edit', edit_mandate_path(mandate) %></td>
+	    <td><%= link_to 'Destroy', mandate, :confirm => 'Are you sure?', :method => :delete %></td>
+	  </tr>
+	<% end %>
+	</table>
+	<br />
+<%= link_to 'New Mandate', new_mandate_path %>
+</div>

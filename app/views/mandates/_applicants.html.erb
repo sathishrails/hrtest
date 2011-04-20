@@ -1,0 +1,6 @@
+<div class="field">
+<%= fields_for "mandate[new_interview_attributes][][new_applicant_attributes][]",applicant_object do |applicant_form| %>
+   <%=applicant_form.text_field :name  %>
+     <%#applicant_from.collection_select :applicant_id, Applicant.all, :id, :name %> 
+<% end %> 
+ </div>

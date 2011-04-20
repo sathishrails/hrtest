@@ -1,0 +1,28 @@
+<div id = "ralign">
+		<%= link_to 'Home', '# '%></p></li>
+		<%= link_to 'Mandate' , mandates_path %>
+		<%= link_to 'Interview' , interviews_path %>
+		<%= link_to 'Applicant' , applicants_path %>
+		<%= link_to 'Comment' , comments_path %>
+		<%= link_to 'Company' , companies_path %>
+</div>
+<span id="comments_count"><%= pluralize(@comments.count, "Comment") %></span>
+<div id="comments">
+  <%= render :partial => @comments, :locals => { :list => true } %>
+</div>
+
+<hr />
+
+<div id="comment-notice"></div>
+
+<h2>Say something!</h2>
+<% form_for Comment.new, :remote => true do |f| %>
+	<%= f.label :name, "Your name" %><br />
+	<%= f.text_field :name %><br />
+	<%= f.label :email, "Email" %><br />
+	<%= f.text_field :email %><br />
+	<%= f.label :body, "Comment" %><br />
+	<%= f.text_area :body, :rows => 8 %><br />
+	
+	<%= f.submit "Add comment" %>
+<% end %>

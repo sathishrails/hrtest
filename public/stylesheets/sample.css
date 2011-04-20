@@ -1,0 +1,21 @@
+#header {
+	margin-top: 0;
+	height: 30px;
+	background-color: #494949;
+}.text1{
+	
+	font-size: 20px;
+	font-family: 'CaviarDreamsRegular', Helvetica, sans-serif;
+}
+.container_12 .clear{height:1px}
+.container_12.grid_12.header{background-color:#blue}
+p{color:green}
+h1{color:orange;}
+.container_12.space{color:green}
+.container_12{background-color:}
+#ralign{text-align: right;}
+#footer {
+	margin-top: 100px;
+	height: 30px;
+	background-color: #494949;
+}

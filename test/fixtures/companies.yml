@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  address: MyText
+  domain: MyText
+  no_of_employee: 1
+  iso_standard: MyString
+  cmmi_level: MyString
+  no_of_branch: 1
+  email: MyString
+  phone_no: 1
+  website: MyString
+
+two:
+  name: MyString
+  address: MyText
+  domain: MyText
+  no_of_employee: 1
+  iso_standard: MyString
+  cmmi_level: MyString
+  no_of_branch: 1
+  email: MyString
+  phone_no: 1
+  website: MyString

@@ -1,0 +1,13 @@
+
+<%= div_for comment do %>
+ <span class="dateandoptions">
+    Posted <%=time_ago_in_words(comment.created_at)%> ago
+		<%= link_to 'Delete', comment_path(comment), :method => :delete, :class => "delete", :remote => true  %>
+  </span>
+	<p><b><%= comment.name %></b> wrote:</p>
+	 &nbsp &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  		&nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  		&nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp   &nbsp  &nbsp  &nbsp 
+	<%= image_tag avatar_url(comment) %>
+	<%= content_tag(:p, comment.body, :class => "comment-body") %>
+	
+	
+<% end %>

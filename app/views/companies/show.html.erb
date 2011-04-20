@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @company.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @company.address %>
+</p>
+
+<p>
+  <b>Domain:</b>
+  <%= @company.domain %>
+</p>
+
+<p>
+  <b>No of employee:</b>
+  <%= @company.no_of_employee %>
+</p>
+
+<p>
+  <b>Iso standard:</b>
+  <%= @company.iso_standard %>
+</p>
+
+<p>
+  <b>Cmmi level:</b>
+  <%= @company.cmmi_level %>
+</p>
+
+<p>
+  <b>No of branch:</b>
+  <%= @company.no_of_branch %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @company.email %>
+</p>
+
+<p>
+  <b>Phone no:</b>
+  <%= @company.phone_no %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <%= @company.website %>
+</p>
+
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>

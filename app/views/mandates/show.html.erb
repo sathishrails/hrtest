@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Designation:</b>
+  <%= @mandate.designation %>
+</p>
+
+ <p>
+   <% @mandate.interviews.each do |interview| %>
+   <%=interview.name %>
+  <%end%>
+  </p>
+
+<%= link_to 'Edit', edit_mandate_path(@mandate) %> |
+<%= link_to 'Back', mandates_path %>

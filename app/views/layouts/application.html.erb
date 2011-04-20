@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hrform1</title>
+    <%= stylesheet_link_tag 'jquery-ui','960','sample','style','nivo-slider.css','style1' %>
+    <%= javascript_include_tag 'jquery-1.5', 'jquery-ui', 'mandatescript','application','jquery.easing.1.3', 'custom','jquery.nivo.slider.pack.js' %>
+    <%= yield :head%>
+</head>
+<body>
+<div id ="header">
+	<h1><div class ="text1"><marquee><IMG SRC="/images/logo.gif" HEIGHT=28 WIDTH=100 /></marquee></div></h1>
+	</div>
+	<div id ="ralign">
+		<p><% if user_signed_in? %>
+			    <%= link_to "Sign out", destroy_user_session_path %>
+			  <% else %>
+			    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", 				new_user_session_path %>
+		  <% end %></p>
+	 </div>
+<div class ="container_12" >
+	<div class="grid_9">
+ 	<%= yield %>		
+	<%= yield :scripts%>
+	</div>
+</div>
+</body>
+</html>

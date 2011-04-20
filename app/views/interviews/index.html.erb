@@ -1,0 +1,35 @@
+<div id = "ralign">
+		<%= link_to 'Home', '# '%></p></li>
+		<%= link_to 'Mandate' , mandates_path %>
+		<%= link_to 'Interview' , interviews_path %>
+		<%= link_to 'Applicant' , applicants_path %>
+		<%= link_to 'Comment' , comments_path %>
+		<%= link_to 'Company' , companies_path %>
+</div>
+<div class="grid_3">
+	<h1>Listing interviews</h1>
+			<table border = 1>
+ 				 <tr>
+ 				  <th>Interviewer Name</th>
+ 				   <th>Conducting date</th>
+ 				   <th>Description</th>
+ 			   <th></th>
+    			  <th></th>
+   			 <th></th>
+  			</tr>
+		<% @interviews.each do |interview| %>
+ 		 <tr>
+  			 <td><%= interview.name %></td>
+   			 <td><%= interview.conducting_date %></td>
+    			<td><%= interview.description %></td>
+    			<td><%= link_to 'Show', interview %></td>
+   			 <td><%= link_to 'Edit', edit_interview_path(interview) %></td>
+ 			<td><%= link_to 'Destroy', interview, :confirm => 'Are you sure?', :method => :delete %></td>
+ 		 </tr>
+		<% end %>
+		</table>
+		<br />
+
+<%= link_to 'New Interview', new_interview_path %>
+</div>
+</div>
